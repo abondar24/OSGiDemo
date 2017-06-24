@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features
+        xmlns="http://karaf.apache.org/xmlns/features/v1.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.0.0 http://karaf.apache.org/xmlns/features/v1.0.0"
+        name="tasklist"
+>
+
+    <feature name="tasklist" version="${pom.version}">
+        <feature>tasklist-persistence</feature>
+        <feature>tasklist-ui</feature>
+    </feature>
+
+    <feature name="tasklist-persistence" version="${pom.version}">
+        <bundle>mvn:org.abondar.experimental.tasklist/tasklist-model/${pom.version}</bundle>
+        <bundle>mvn:org.abondar.experimental.tasklist/tasklist-persistence/${pom.version}</bundle>
+        <bundle>mvn:org.abondar.experimental.tasklist/tasklist-commands/${pom.version}</bundle>
+
+    </feature>
+
+    <feature name="tasklist-ui" version="${pom.version}">
+        <feature>http</feature>
+        <feature>http-whiteboard</feature>
+        <bundle>mvn:org.abondar.experimental.tasklist/tasklist-model/${pom.version}</bundle>
+        <bundle>mvn:org.abondar.experimental.tasklist/tasklist-ui/${pom.version}</bundle>
+    </feature>
+
+</features>

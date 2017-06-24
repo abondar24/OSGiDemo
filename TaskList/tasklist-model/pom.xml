@@ -4,11 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.abondar.experimental</groupId>
-    <artifactId>OSGiDemo</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>TaskList</module>
-    </modules>
-    <packaging>pom</packaging>
+    <artifactId>tasklist-model</artifactId>
+    <parent>
+        <groupId>org.abondar.experimental.tasklist</groupId>
+        <artifactId>TaskList</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+
+    <packaging>bundle</packaging>
 </project>
