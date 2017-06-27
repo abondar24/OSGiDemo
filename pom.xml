@@ -10,6 +10,7 @@
     <modules>
         <module>TaskList</module>
         <module>PersonService</module>
+        <module>Order</module>
     </modules>
     <packaging>pom</packaging>
 </project>
