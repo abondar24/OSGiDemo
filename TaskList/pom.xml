@@ -82,6 +82,23 @@
                     </instructions>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.aries.blueprint</groupId>
+                <artifactId>blueprint-maven-plugin</artifactId>
+                <version>1.5.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>blueprint-generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <scanPaths>
+                        <scanPath>${scanPath}</scanPath>
+                    </scanPaths>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

@@ -12,17 +12,16 @@
     </feature>
 
     <feature name="tasklist-persistence" version="${pom.version}">
-        <bundle>mvn:org.abondar.experimental.tasklist/tasklist-model/${pom.version}</bundle>
-        <bundle>mvn:org.abondar.experimental.tasklist/tasklist-persistence/${pom.version}</bundle>
-        <bundle>mvn:org.abondar.experimental.tasklist/tasklist-commands/${pom.version}</bundle>
+        <bundle>mvn:org.abondar.experimental.tasklist/tasklist-model/</bundle>
+        <bundle>mvn:org.abondar.experimental.tasklist/tasklist-persistence/</bundle>
 
     </feature>
 
     <feature name="tasklist-ui" version="${pom.version}">
         <feature>http</feature>
         <feature>http-whiteboard</feature>
-        <bundle>mvn:org.abondar.experimental.tasklist/tasklist-model/${pom.version}</bundle>
-        <bundle>mvn:org.abondar.experimental.tasklist/tasklist-ui/${pom.version}</bundle>
+        <bundle>mvn:org.abondar.experimental.tasklist/tasklist-model/</bundle>
+        <bundle>mvn:org.abondar.experimental.tasklist/tasklist-ui/</bundle>
     </feature>
 
 </features>
