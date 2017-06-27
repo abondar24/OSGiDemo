@@ -18,5 +18,5 @@ install -s mvn:org.abondar.experimental.personservice/personservice-webui/
 localhost:8181/cxf/persoservice - REST API
 localhost:8181/personserviceui - UI
 
--ps
+- ps
 Sometimes there are issues with importing jaxrs.ws so after install start each bundle manually
