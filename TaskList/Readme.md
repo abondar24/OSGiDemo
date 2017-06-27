@@ -1,8 +1,7 @@
 # Tasklist Demo.
 
 Basic web app consiting of 4 bundles:
-
-- Commands(shell access)
+- UI
 - Features(contains features.xml for combining bundles)
 - Model(data model)
 - Persistence(layer for saving data(e.g to db))
