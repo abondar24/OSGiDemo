@@ -26,7 +26,6 @@
         <module>tasklist-persistence</module>
         <module>tasklist-ui</module>
         <module>tasklist-features</module>
-        <module>tasklist-commands</module>
     </modules>
 
     <dependencies>
