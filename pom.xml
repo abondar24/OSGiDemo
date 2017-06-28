@@ -11,6 +11,7 @@
         <module>TaskList</module>
         <module>PersonService</module>
         <module>Order</module>
+        <module>JMS2REST</module>
     </modules>
     <packaging>pom</packaging>
 </project>

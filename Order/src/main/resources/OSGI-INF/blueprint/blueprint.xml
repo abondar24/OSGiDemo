@@ -10,7 +10,7 @@
 
     <cm:property-placeholder persistent-id="org.abondar.experimental.order" update-strategy="reload">
         <cm:default-properties>
-            <cm:property name="mailserver" value="smtp.gmail.com"/>
+            <cm:property name="mailserver" value="imap.gmail.com"/>
             <cm:property name="testVendorEmail" value="abondar1992@gmail.com"/>
         </cm:default-properties>
     </cm:property-placeholder>
