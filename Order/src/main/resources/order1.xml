@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <order>
     <customer>Alex Bondar</customer>
-    <item name="Balalaika" vendor="vendor" count="1"/>
+    <item name="Balalaika" vendor="direct" count="1"/>
     <item name="Salo" vendor="vendor1" count="5"/>
 </order>
