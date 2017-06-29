@@ -3,7 +3,7 @@ package org.abondar.experimental.personservice.model;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
-@Produces(MediaType.APPLICATION_JSON)
+@Produces({MediaType.APPLICATION_JSON})
 public interface PersonService {
     @GET
     @Path("/")
@@ -15,6 +15,7 @@ public interface PersonService {
 
     @PUT
     @Path("/{id}")
+    @Consumes({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
     public Person updatePerson(@PathParam("id") String id,Person person);
 
     @POST

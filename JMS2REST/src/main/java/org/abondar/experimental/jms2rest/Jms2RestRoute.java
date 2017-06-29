@@ -17,7 +17,7 @@ public class Jms2RestRoute extends RouteBuilder {
                 .setHeader("person_id",xpath("/person/id").stringResult())
                 .to("log:test")
                 .setHeader(Exchange.HTTP_METHOD,constant("PUT"))
-                .setHeader(Exchange.CONTENT_TYPE,constant("test/xml"))
+                .setHeader(Exchange.CONTENT_TYPE,constant("application/xml"))
                 .setHeader(Exchange.HTTP_URI,simple("${properties:personServiceUri}/${headers.person_id}"))
                 .to("http://dummy");
     }
