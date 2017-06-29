@@ -8,6 +8,7 @@ Idea: take a file from directory, send it to JMS Queue and from JMS queue put it
 - Setup a JMS broker(I used activemq)
 - Install features
    ```yaml
+  feature:repo-add activemq latest-version-of-activemq
   feature:repo-add camel latest-version-of-camel 
   feature:install camel-blueprint camel-jms camel-http camel-saxon activemq-broker jms
   jms:create -t activemq localhost(or ip/hostname of your broker.)
