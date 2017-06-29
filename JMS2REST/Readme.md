@@ -10,10 +10,10 @@ Idea: take a file from directory, send it to JMS Queue and from JMS queue put it
    ```yaml
   feature:repo-add activemq latest-version-of-activemq
   feature:repo-add camel latest-version-of-camel 
-  feature:install camel-blueprint camel-jms camel-http camel-saxon activemq-broker jms
+  feature:install camel-blueprint camel-jms camel-http camel-saxon camel-jsonpath activemq-broker jms
   jms:create -t activemq localhost(or ip/hostname of your broker.)
   install -s mvn:org.abondar.experimental/JMS2REST
   ```
-- In karaf directory create a directory named in and put person1.xml from src/main/resources
+- In karaf directory create a directory named in and put person1.xml or person1.json from src/main/resources
 - After you start do log:tail and see that message is ok and data put to REST. 
   You can also run localhost:8181/cxf/personservice to check that data is persisted.

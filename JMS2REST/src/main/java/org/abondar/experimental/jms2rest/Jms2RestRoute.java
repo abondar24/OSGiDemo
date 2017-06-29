@@ -14,10 +14,19 @@ public class Jms2RestRoute extends RouteBuilder {
 
         from("jms:person").id("personJms2Rest")
                 .onException(ConnectException.class).log("Exception processing message").end()
+                .choice()
+                .when(header("CamelFileName")
+                .endsWith(".xml"))
                 .setHeader("person_id",xpath("/person/id").stringResult())
+                .setHeader(Exchange.CONTENT_TYPE,constant("application/xml"))
+                .endChoice()
+                .when(header("CamelFileName")
+                        .endsWith(".json"))
+                .setHeader("person_id").jsonpath("$.person.id")
+                .setHeader(Exchange.CONTENT_TYPE,constant("application/json"))
+                .end()
                 .to("log:test")
                 .setHeader(Exchange.HTTP_METHOD,constant("PUT"))
-                .setHeader(Exchange.CONTENT_TYPE,constant("application/xml"))
                 .setHeader(Exchange.HTTP_URI,simple("${properties:personServiceUri}/${headers.person_id}"))
                 .to("http://dummy");
     }
