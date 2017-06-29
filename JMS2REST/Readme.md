@@ -7,10 +7,12 @@ Idea: take a file from directory, send it to JMS Queue and from JMS queue put it
 - You need to have a PersonService up and running(see readme for this demo)
 - Setup a JMS broker(I used activemq)
 - Install features
+   ```yaml
   feature:repo-add camel latest-version-of-camel 
   feature:install camel-blueprint camel-jms camel-http camel-saxon activemq-broker jms
   jms:create -t activemq localhost(or ip/hostname of your broker.)
   install -s mvn:org.abondar.experimental/JMS2REST
+  ````
 
 - After you start do log:tail and see that message is ok and data put to REST. 
   You can also run localhost:8181/cxf/personservice to check that data is persisted.
