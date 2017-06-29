@@ -21,6 +21,7 @@ public class OrderRouteBuilder extends RouteBuilder {
                 .setHeader("subject",simple("Order from ${header.customer}"))
                 .to("velocity:mailtemplate.txt")
                 .to("stream:out")
-                .to("smtp:{{mailserver}}");
+              //  .to("smtp:{{mailserver}}");
+                .to("smtp:localhost");
     }
 }

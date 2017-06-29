@@ -8,13 +8,6 @@
   http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd
   ">
 
-    <cm:property-placeholder persistent-id="org.abondar.experimental.order" update-strategy="reload">
-        <cm:default-properties>
-            <cm:property name="mailserver" value="imap.gmail.com"/>
-            <cm:property name="testVendorEmail" value="abondar1992@gmail.com"/>
-        </cm:default-properties>
-    </cm:property-placeholder>
-
     <bean id="routeBuilder" class="org.abondar.experimental.order.OrderRouteBuilder">
     </bean>
 
