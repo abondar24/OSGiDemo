@@ -15,6 +15,6 @@ feature:install tasklist
 feature:install tasklist-bundlename(e.g tasklist-ui)
 ```
 
--Run
+- Run
 localhost:8181/tasklist
 
